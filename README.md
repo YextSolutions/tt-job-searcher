@@ -1,8 +1,6 @@
-# SITE-STARTER-REACT-BASIC
+# TT-JOB-SEARCHER
 
-This repository provides a basic example of how to start developing a React site on the Yext Pages system.
-
-Follow this Track on Hitchhikers to build a full website with Search, Directories, Analytics and more based off of this starter repo: https://hitchhikers.yext.com/tracks/pages-development/
+This repository is the completed version of the (Search UI React track on Yext Hitchhikers)[https://hitchhikers.yext.com/tracks/search-ui-react/]. You can either follow along with that track to learn how to build this project from scratch or you can get started with this repo.
 
 ## Getting Started
 
@@ -20,7 +18,7 @@ Follow this Track on Hitchhikers to build a full website with Search, Directorie
 
 ```shell
 git clone https://github.com/yext/pages-starter-react-locations
-cd pages-starter-react-locations
+cd tt-job-searcher
 npm install
 ```
 
@@ -34,22 +32,23 @@ npm run dev
 
 This command will start a Vite-powered dev server that will enable hot-reloading. Additionally, the command will generate a `localData` directory that contains a subset of your Knowledge Graph data. This command is automatically in "dynamic" mode, which means it will pull data updates automatically from your Knowledge graph, so real-time data changes in your Yext account will be reflected in your local dev site.
 
-NOTE: Whenever you make changes to your stream definitions, you must re-run `npm run dev` for the system to update the `features.json` and the required entities to power your site. 
+NOTE: Whenever you make changes to your stream definitions, you must re-run `npm run dev` for the system to update the `features.json` and the required entities to power your site.
 
 _Before committing_ your code, we recommend running the following command:
+
 ```
 npm run build:serve
-``` 
+```
 
 This command will generate a production build of your site, so you can ensure there are no build errors or unexpected behavior. This build step replicates the production build environment used in the Yext system, and serves your data at `localhost:8000`.
 
-In practice, development builds (via `npm run dev`) and production builds compile and bundle assets differently. For local development, ES Modules are loaded directly by the browser, allowing fast iteration during local development and also allows for hot module replacement (HMR). Other things like CSS are also loaded directly by the browser, including linking to sourcemaps. During a production build all of the different files are compiled (via ESBuild for jsx/tsx) and minified, creating assets as small as possible so that the final html files load quickly when served to a user. Tree-shaking also occurs during the build step, in which any unused dependencies are removed from your final build. 
+In practice, development builds (via `npm run dev`) and production builds compile and bundle assets differently. For local development, ES Modules are loaded directly by the browser, allowing fast iteration during local development and also allows for hot module replacement (HMR). Other things like CSS are also loaded directly by the browser, including linking to sourcemaps. During a production build all of the different files are compiled (via ESBuild for jsx/tsx) and minified, creating assets as small as possible so that the final html files load quickly when served to a user. Tree-shaking also occurs during the build step, in which any unused dependencies are removed from your final build.
 
 ### Other Useful commands
 
 `yext init` - Authenticates the Yext CLI with your Yext account
 
-`yext pages generate-test-data` - pull an example set of `localData` from your account. This command is packaged within `npm run dev'. 
+`yext pages generate-test-data` - pull an example set of `localData` from your account. This command is packaged within `npm run dev'.
 
 `npm run build` - Runs a production build against your `localData`: part one of `npm run build:serve`
 
@@ -72,9 +71,7 @@ root
 │   └───components
 │   │
 │   └───templates
-│       │   location.tsx
-│       │   robots.ts
-│       │   static.tsx
+│       │   search.tsx
 │   │
 │   └───types
 ```

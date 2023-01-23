@@ -1,6 +1,6 @@
 # TT-JOB-SEARCHER
 
-This repository is the completed version of the (Search UI React track on Yext Hitchhikers)[https://hitchhikers.yext.com/tracks/search-ui-react/]. You can either follow along with that track to learn how to build this project from scratch or you can get started with this repo.
+This repository is the completed version of the [Search UI React track on Yext Hitchhikers](https://hitchhikers.yext.com/tracks/search-ui-react/). You can either follow along with that track to learn how to build this project from scratch or you can get started with this repo.
 
 ## Getting Started
 

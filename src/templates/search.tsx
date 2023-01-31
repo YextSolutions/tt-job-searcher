@@ -17,6 +17,7 @@ import {
   SandboxEndpoints,
 } from "@yext/search-headless-react";
 import JobSearch from "../components/JobSearch";
+import SearchApiKeyModal from "../components/SearchApiKeyModal";
 
 export const getPath: GetPath<TemplateProps> = () => {
   return "search";
@@ -33,10 +34,11 @@ export const getHeadConfig: GetHeadConfig<
 };
 
 const headlessConfig: HeadlessConfig = {
-  apiKey: "dff99174af932d9318958ea047077f17",
+  apiKey: import.meta.env.YEXT_PUBLIC_SEARCH_API_KEY || "",
   experienceKey: "turtlehead",
   locale: "en",
   verticalKey: "jobs",
+  // remove this if you are not using a Sandbox account
   endpoints: SandboxEndpoints,
 };
 
@@ -46,6 +48,8 @@ const Search: Template<TemplateRenderProps> = () => {
   return (
     <SearchHeadlessProvider searcher={searcher}>
       <JobSearch />
+      {/* Once you have added your Search API Key, you can remove this component */}
+      <SearchApiKeyModal />
     </SearchHeadlessProvider>
   );
 };
